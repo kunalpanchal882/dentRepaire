@@ -32,8 +32,29 @@
   <body>
     <header class="hero_section">
       <!-- BACKGROUND IMAGE -->
-      <div class="image">
-        <img src="./images/Overlay.jpg" alt="" />
+      <div class="carousel">
+        <div class="slides">
+          <img src="./images/Rectangle 6.png" alt="" />
+          <img src="./images/Overlay.jpg" alt="" />
+          <img src="./images/Rectangle 5.png" alt="" />
+          <img src="./images/Rectangle 6.png" alt="" />
+          <img src="./images/Overlay.jpg" alt="" />
+        </div>
+
+        <div class="carousel_handler">
+          <div class="num">
+              <span id="current">01</span> /
+              <span id="total">03</span>
+          </div>
+
+          <div class="track"></div>
+
+          <div class="controls">
+            <button class="prev circle-btn">❮</button>
+            <button class="next circle-btn">❯</button>
+          </div>
+          </div>
+        </div>
       </div>
 
       <!-- NAVBAR -->
@@ -84,7 +105,7 @@
           </h1>
           <p>
             Experience top-quality Automotive Paintless Dent Repair services
-            that restore your vehicle to its original beauty.
+            that restore your vehicle to its original beauty. Schedule an appointment today!
           </p>
           <button class="herobutton" id="hero_content_btn">
             Schedule an Appointment
@@ -101,7 +122,7 @@
     </header>
 
     <section class="service_section">
-      <div class="single_service">
+      <div class="single_service" id="less_width">
         <div class="toolIcons">
           <img src="./assets/icons/Frame 5.png" alt="" />
         </div>
@@ -111,7 +132,7 @@
           metal back into its original shape.
         </p>
       </div>
-      <div class="single_service">
+      <div class="single_service" id="more_width">
         <div class="toolIcons">
           <img src="./assets/icons/Frame 6.png" alt="" />
         </div>
@@ -121,14 +142,14 @@
           repairs help preserve its resale value.
         </p>
       </div>
-      <div class="single_service">
+      <div class="single_service" id="less_width">
         <div class="toolIcons">
           <img src="./assets/icons/Frame 4.png" alt="" />
         </div>
         <h3>Zero Deductible</h3>
         <p>Get your repairs done with no out-of-pocket costs</p>
       </div>
-      <div class="single_service">
+      <div class="single_service" id="more_width">
         <div class="toolIcons">
           <img src="./assets/icons/Frame 3.png" alt="" />
         </div>
@@ -156,7 +177,8 @@
       </div>
 
       <div id="experience_content">
-        <h1>
+        <div id="upper_content">
+          <h1>
           Experience <span>The Quality And Efficiency</span> Of Our Paintless
           Dent Repair Services
         </h1>
@@ -170,6 +192,8 @@
           <hr />
           <hr />
           <hr />
+        </div>
+
         </div>
         <div id="check_section">
           <div id="maincheck_section">
@@ -193,10 +217,10 @@
             </div>
           </div>
 
-          <button class="herobutton" id="experience_btn">
-            Schedule an Appointment
-          </button>
         </div>
+        <button class="herobutton" id="experience_btn">
+          Schedule an Appointment
+        </button>
       </div>
     </section>
 
@@ -214,6 +238,7 @@
             <hr />
           </div>
         </div>
+
         <div class="quality_para">
           <p>
             Transform your vehicle with expert paintless dent repair. Our
@@ -251,7 +276,7 @@
           <hr />
         </div>
         <div id="getcar_btns">
-          <button class="herobutton">Schedule an Appointment</button>
+          <button class="herobutton" id="schedule_btn">Schedule an Appointment</button>
           <button class="signup_btn">Sign UP</button>
         </div>
       </div>
@@ -277,11 +302,13 @@
     </section>
 
     <section class="trusted_company">
-      <h1>Trusted by industry-leading <span>companies worldwide</span></h1>
+      <div id="company_content">
+        <h1>Trusted by industry-leading <span>companies worldwide</span></h1>
       <div class="hr_style">
         <hr />
         <hr />
         <hr />
+      </div>
       </div>
 
       <div class="trustedcompany_slider">
@@ -290,7 +317,7 @@
           <div class="icon"><img src="./assets/icons/honda-512 (1).png" /></div>
           <div class="icon"><img src="./assets/icons/hyundai-512.png" /></div>
           <div class="icon">
-            <img src="./assets/icons/land-rover-png-logo-6087.png" />
+            <img src="./assets/icons/land-rover-png-logo-6087 (1).png" />
           </div>
           <div class="icon">
             <img src="./assets/icons/volkswagen-512.png" />
@@ -308,7 +335,7 @@
           <div class="icon"><img src="./assets/icons/honda-512 (1).png" /></div>
           <div class="icon"><img src="./assets/icons/hyundai-512.png" /></div>
           <div class="icon">
-            <img src="./assets/icons/land-rover-png-logo-6087.png" />
+            <img src="./assets/icons/land-rover-png-logo-6087 (1).png" />
           </div>
           <div class="icon">
             <img src="./assets/icons/volkswagen-512.png" />
@@ -323,10 +350,12 @@
             </div> -->
         </div>
       </div>
+
     </section>
 
     <section class="gallery">
-      <h1>Transformation Gallery: Witness <span>the Magic!</span></h1>
+      <div id="gallery_content">
+        <h1>Transformation Gallery: Witness <span>the Magic!</span></h1>
       <p>
         Explore stunning before and after views of our automotive dent repair
         expertise.
@@ -335,6 +364,7 @@
         <hr />
         <hr />
         <hr />
+      </div>
       </div>
 
       <div class="gallery_image">
@@ -386,9 +416,28 @@
           </div>
         </div>
       </div>
-      <div class="client_image">
-        <img src="./images/Frame 294.png" alt="" />
-      </div>
+     <div class="sliderss">
+       <div class="review_slider">
+  <div class="review_track">
+
+    <div class="slide active">
+      <img src="./images/Frame 242.png" />
+    </div>
+
+    <div class="slide">
+      <img src="./images/Frame 242.png" />
+    </div>
+
+    <div class="slide">
+      <img src="./images/Frame 242.png" />
+    </div>
+
+  </div>
+        </div>
+
+        <div class="dotes"></div>
+     </div>
+
     </section>
 
     <section class="questions">
@@ -408,7 +457,7 @@
 
       <div class="question_ans">
         <div class="single_question">
-          <hr>
+          <hr />
           <div class="question">
             <h3>What services do you offer?</h3>
             <div class="icon">
@@ -422,7 +471,7 @@
         </div>
 
         <div class="single_question">
-          <hr>
+          <hr />
           <div class="question">
             <h3>How does it work?</h3>
             <div class="icon">
@@ -436,7 +485,7 @@
         </div>
 
         <div class="single_question">
-          <hr>
+          <hr />
           <div class="question">
             <h3>Can I schedule an appointment online?</h3>
             <div class="icon">
@@ -450,7 +499,7 @@
         </div>
 
         <div class="single_question">
-          <hr>
+          <hr />
           <div class="question">
             <h3>Do you provide a warranty?</h3>
             <div class="icon">
@@ -464,7 +513,7 @@
         </div>
 
         <div class="single_question">
-          <hr>
+          <hr />
           <div class="question">
             <h3>CHow long does it take?</h3>
             <div class="icon">
@@ -476,50 +525,105 @@
             including dent removal, hail damage repair, and more.
           </p>
         </div>
-
       </div>
     </section>
 
     <section class="form_section">
-      <div class="background">
-        <img src="./images/image 2 (1).png" alt="">
-      </div>
-
       <div class="inner_content">
         <div class="form_info">
-        <h1>Get In Touch With SELECT PDR - <span>Paintless Dent Removal</span></h1>
-        <p>"Let us assist you with your automotive dent repair needs</p>
-      </div>
-
-      <div class="form">
-        <form action="">
-          <div class="username">
-            <input type="text" placeholder="Enter your name">
-            <input type="text" placeholder="Enter your Email">
-          </div>
-          <textarea name="" id="" placeholder="Write messgae here....."></textarea>
-          <div id="nav_button">
-            <button class="herobutton" id="submitform">Send Email</button>
-          </div>
-        </form>
-      </div>
-      </div>
-    </section>
-
-    <section class="appointment"> 
-        <h1>Schedule an <span>appointment today!</span></h1>
-        <p>Experience our high-quality service and schedule your appointment with SELECT PDR now! </p>
-        <div class="hr_style">
-          <hr />
-          <hr />
-          <hr />
+          <h1>
+            Get In Touch With SELECT PDR - <span>Paintless Dent Removal</span>
+          </h1>
+          <p>"Let us assist you with your automotive dent repair needs</p>
         </div>
-        <div class="nav_button">
-            <button class="herobutton">Schedule an Appointment</button>
-            <button class="signup_btnn" id="sign">Sign UP</button>
-          </div>
+
+        <div class="form">
+          <form action="">
+            <div class="username">
+              <input type="text" placeholder="Enter your name" />
+              <input type="text" placeholder="Enter your Email" />
+            </div>
+            <input type="text" placeholder="Subject" />
+            <textarea
+              name=""
+              id=""
+              placeholder="Write messgae here....."
+            ></textarea>
+            <div id="nav_button">
+              <button class="herobutton" id="submitform">Send Email</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
 
+    <section class="appointment">
+      <h1>Schedule an <span>appointment today!</span></h1>
+      <p>
+        Experience our high-quality service and schedule your appointment with
+        SELECT PDR now!
+      </p>
+      <div class="hr_style">
+        <hr />
+        <hr />
+        <hr />
+      </div>
+      <div class="nav_button">
+        <button class="herobutton">Schedule an Appointment</button>
+        <button class="signup_btnn" id="sign">Sign UP</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="close_footer">
+        <i class="ri-arrow-up-s-line"></i>
+        <p>Back to top</p>
+      </div>
+
+      <div class="footer_content">
+        <div class="logo_section">
+          <div id="logo">
+            <img src="./images/SELECT PDR-SK-logo 3.png" alt="" />
+          </div>
+          <div id="footer_links">
+            <i class="ri-facebook-fill active"></i>
+            <i class="ri-instagram-line"></i>
+            <i class="ri-twitter-fill"></i>
+            <i class="ri-linkedin-fill"></i>
+          </div>
+        </div>
+
+        <div class="about">
+          <h4>Quick links</h4>
+          <p>About</p>
+          <p>Services</p>
+          <p>Financing</p>
+          <p>FAQs</p>
+        </div>
+
+        <div class="subs">
+          <h4>Subscribe to newsletter</h4>
+          <div class="input">
+            <input type="text" placeholder="Enter your name" />
+            <div class="nav_button" id="sub_btn">
+              <button class="herobutton">Subscribe</button>
+            </div>
+          </div>
+          <p>Stay updated with our latest news and offers.</p>
+        </div>
+      </div>
+    </footer>
+
+    <section class="page_bottom">
+      <div id="left">
+        <p>Privacy</p>
+        <p>Terms and Conditions</p>
+        <p>Cookie Policy</p>
+      </div>
+      <div id="right">
+        <p>© 2024 SELECT PDR. All rights reserved.</p>
+      </div>
+    </section>
   </body>
   <script src="./script.js"></script>
 </html>
