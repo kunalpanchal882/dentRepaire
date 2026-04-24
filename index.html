@@ -29,7 +29,8 @@
     />
   </head>
 
-  <body>
+  <body id="top">
+
     <header class="hero_section">
       <!-- BACKGROUND IMAGE -->
       <div class="carousel">
@@ -255,9 +256,28 @@
         </div>
       </div>
 
-      <div class="quality_demo">
+      <!-- <div class="quality_demo">
         <img src="./images/Rectangle 5.png" alt="" />
+      </div> -->
+
+      <div class="quality_demo">
+  <div class="video_container" id="videoContainer">
+    
+    <!-- Thumbnail -->
+    <img src="./images/Rectangle 5.png" class="thumbnail" id="thumbnail" />
+
+    <!-- Video -->
+    <video id="myVideo" src="https://www.pexels.com/download/video/35508465/"></video>
+
+    <!-- Play/Pause Button -->
+    <div class="play_button" id="playBtn">
+      <div id="playIcon">
+        <img src="./assets/icons/playbutton.png" alt="" srcset="">
       </div>
+    </div>
+
+  </div>
+</div>
     </section>
 
     <section class="get_car">
@@ -297,7 +317,70 @@
       </div>
 
       <div class="carAction_image">
-        <img src="./images/Group 67.png" alt="" />
+
+        <div class="carAction_tracker">
+
+          <!-- ORIGNAL  -->
+          <div class="repaire_img">
+          <img src="./images/repaire_image_3.png" alt="" />
+        </div>
+        <div class="repaire_img">
+          <img src="./images/repaire_image_2.png" alt="" />
+        </div>
+        <div class="repaire_img">
+          <img src="./images/repaire_image_3.png" alt="" />
+        </div>
+        <div class="repaire_img">
+          <img src="./images/repaire_image_4.png" alt="" />
+        </div>
+        <div class="repaire_img">
+          <img src="./images/repaire_image_5.png" alt="" />
+        </div>
+        <div class="repaire_img">
+          <img src="./images/repaire_image_2.png" alt="" />
+        </div>
+
+        <!-- CLONE -->
+           <div class="repaire_img">
+          <img src="./images/repaire_image_3.png" alt="" />
+        </div>
+        <div class="repaire_img">
+          <img src="./images/repaire_image_2.png" alt="" />
+        </div>
+        <div class="repaire_img">
+          <img src="./images/repaire_image_3.png" alt="" />
+        </div>
+        <div class="repaire_img">
+          <img src="./images/repaire_image_4.png" alt="" />
+        </div>
+        <div class="repaire_img">
+          <img src="./images/repaire_image_5.png" alt="" />
+        </div>
+        <div class="repaire_img">
+          <img src="./images/repaire_image_2.png" alt="" />
+        </div>
+
+           <div class="repaire_img">
+          <img src="./images/repaire_image_3.png" alt="" />
+        </div>
+        <div class="repaire_img">
+          <img src="./images/repaire_image_2.png" alt="" />
+        </div>
+        <div class="repaire_img">
+          <img src="./images/repaire_image_3.png" alt="" />
+        </div>
+        <div class="repaire_img">
+          <img src="./images/repaire_image_4.png" alt="" />
+        </div>
+        <div class="repaire_img">
+          <img src="./images/repaire_image_5.png" alt="" />
+        </div>
+        <div class="repaire_img">
+          <img src="./images/repaire_image_2.png" alt="" />
+        </div>
+
+        </div>
+
       </div>
     </section>
 
@@ -332,6 +415,35 @@
             </div> -->
 
           <!-- duplicate (important for infinite effect) -->
+          <div id="icon"><img src="./assets/icons/honda-512 (1).png" /></div>
+          <div id="icon"><img src="./assets/icons/hyundai-512.png" /></div>
+          <div id="icon">
+            <img src="./assets/icons/land-rover-png-logo-6087 (1).png" />
+          </div>
+          <div ="icon">
+            <img src="./assets/icons/volkswagen-512.png" />
+          </div>
+          <div id="icon"><img src="./assets/icons/kia-512.png" /></div>
+          <div id="icon"><img src="./assets/icons/porsche-512.png" /></div>
+          <div id="icon">
+            <img src="./assets/icons/toyota-car-logo-6965.png" />
+          </div>
+
+          <!-- duplicate (important for infinite effect) -->
+          <div id="icon"><img src="./assets/icons/honda-512 (1).png" /></div>
+          <div id="icon"><img src="./assets/icons/hyundai-512.png" /></div>
+          <div id="icon">
+            <img src="./assets/icons/land-rover-png-logo-6087 (1).png" />
+          </div>
+          <div ="icon">
+            <img src="./assets/icons/volkswagen-512.png" />
+          </div>
+          <div id="icon"><img src="./assets/icons/kia-512.png" /></div>
+          <div id="icon"><img src="./assets/icons/porsche-512.png" /></div>
+          <div id="icon">
+            <img src="./assets/icons/toyota-car-logo-6965.png" />
+          </div>
+
           <div id="icon"><img src="./assets/icons/honda-512 (1).png" /></div>
           <div id="icon"><img src="./assets/icons/hyundai-512.png" /></div>
           <div id="icon">
@@ -561,7 +673,7 @@
 
     </section>
 
-    <section class="questions">0
+    <section class="questions">
       <div class="left_question_section">
           <h1>Frequently Asked <span>Questions</span></h1>
         <p>
@@ -662,8 +774,8 @@
         <div class="form">
           <form action="">
             <div class="username">
-              <input type="text" placeholder="Enter your name" />
-              <input type="text" placeholder="Enter your Email" />
+              <input type="text" placeholder="Your name" />
+              <input type="text" placeholder="Your Email" />
             </div>
             <input type="text" placeholder="Subject" />
             <textarea
@@ -697,7 +809,7 @@
     </section>
 
     <footer class="footer">
-      <div class="close_footer">
+      <div href="#top" class="close_footer" id="backToTop">
         <i class="ri-arrow-up-s-line"></i>
         <p>Back to top</p>
       </div>
@@ -723,6 +835,7 @@
           <p>FAQs</p>
         </div>
 
+        
         <div class="subs">
           <h4>Subscribe to newsletter</h4>
           <div class="input">
@@ -735,7 +848,7 @@
         </div>
       </div>
     </footer>
-
+    <hr id="footer_hr">
     <section class="page_bottom">
       <div id="left">
         <p>Privacy</p>

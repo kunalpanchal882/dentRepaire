@@ -3,11 +3,41 @@ const mobilemenu = document.querySelector("#mobile_menu")
 const closemenu = document.querySelector("#closeMenu")
 
 
-const footer = document.querySelector(".footer");
-const toggleBtn = document.querySelector(".close_footer");
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("backToTop").addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
 
-toggleBtn.addEventListener("click", () => {
-  footer.classList.toggle("collapsed");
+
+
+const container = document.getElementById("videoContainer");
+const video = document.getElementById("myVideo");
+const btn = document.getElementById("playBtn");
+const thumbnail = document.getElementById("thumbnail");
+
+let isPlaying = false;
+
+container.addEventListener("click", () => {
+
+  // First click → start video
+  if (!isPlaying) {
+    thumbnail.style.display = "none";
+    video.style.display = "block";
+    video.play();
+    btn.innerHTML = "❚❚"; // pause icon
+    isPlaying = true;
+  } 
+  // Next click → pause
+  else {
+    video.pause();
+    btn.innerHTML = "▶"; // play icon
+    isPlaying = false;
+  }
+
 });
 
 
@@ -263,7 +293,7 @@ setInterval(() => {
     // animateBtn(nextBtn);
     updateUI();
   }
-}, 7000);
+}, 3000);
                                                                                                                               
 // review courosel
 document.addEventListener("DOMContentLoaded", () => {
