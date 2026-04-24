@@ -335,7 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 🔥 start after delay (so first slide fully visible)
   setTimeout(() => {
-    setInterval(moveSlide, 2500);
+    // setInterval(moveSlide, 2500);
   }, 1500);
 
 });
