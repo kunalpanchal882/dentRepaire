@@ -132,6 +132,13 @@ span {
   line-height: 16px;
 }
 
+.signup_btn:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+  background-color:  var(--primary-color);
+  color: var(--text-color);
+}
+
 /* HERO IMAGE */
 
 /* carosuel */
@@ -1824,7 +1831,7 @@ span {
   justify-content: center;
   text-align: center;
   cursor: pointer;
-  gap: 26px;
+  /* gap: 26px; */
   max-width: 101px;
   max-height: 71px;
   /* background: #000; */
@@ -1833,8 +1840,26 @@ span {
 /* Optional icon animation */
 .close_footer i {
   width: 100%;
-  transform: scale(3.6);
+  font-size: 50px;
+  /* transform: scale(5.9); */
   transition: transform 0.3s ease;
+  display: inline-block;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-5px);
+  }
 }
 
 .close_footer p {
