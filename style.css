@@ -102,7 +102,7 @@ span {
 .hero_section {
   width: 100%;
   position: relative;
-  max-height: 1004px;
+  /* max-height: 1004px; */
 }
 
 /* HERO BUTTON */
@@ -527,13 +527,13 @@ span {
 
 /* EXPERIENCE SECTION */
 .experience_section {
-  /* background-color: var(--background-third-color); */
-  display: flex;
+  /* display: flex; */
   position: relative;
   min-height: 719px;
   gap: 60px;
   padding: 120px var(--main-padding);
 }
+
 
 .experience_image {
   max-width: 50%;
@@ -712,7 +712,7 @@ span {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 837px;
+  max-width: 837px;
   padding-right: 20px;
   min-height: 208px;
 }
@@ -740,7 +740,7 @@ span {
   gap: 10px;
 }
 .quality_section .quality_content #quality_hr hr {
-  width: 36px;
+  max-width: 36px;
   height: 4px;
   border: none;
   background-color: var(--primary-color);
@@ -750,7 +750,7 @@ span {
   display: flex;
   flex-direction: column;
   gap: 60px;
-  width: 673px;
+  max-width: 673px;
 }
 
 .quality_section .quality_content .quality_para #quality_btn {
@@ -1445,6 +1445,7 @@ span {
   min-height: 100%;
   background-color: var(--text-color); 
   min-height: 322px;  
+  align-items: center;
   padding: 60px 116px;
   display: flex;
   gap: 60px;
@@ -1453,25 +1454,27 @@ span {
 
 .slide .profile{
   position: relative;
-  width:188px;
-  height: 188px;
+  max-width:188px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* height: 188px; */
 }
 
 .slide .profile .profileImage{
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100%;
 }
 
 .slide .profile .profileicon{
   position: absolute;
-  top: 84%;
-  left: 35%;
+  bottom: -9%;
+  /* left: 35%; */
   display: flex;
   justify-content: center;
-  width: 52px;
-  height: 37.5px;
+  max-width: 52px;
 }
 
 .slide .profile .profileicon img{
@@ -1998,8 +2001,8 @@ span {
 
 
   @media (max-width: 1152px) {
-    .navbar {
-      padding: 20px 100px;
+        .navbar {
+        padding: 19px 54px;
     }
   }
 
@@ -2350,6 +2353,11 @@ span {
   .quality_section .quality_content {
     gap: 22px;
 }
+
+.quality_section .quality_content .quality_para {
+    gap: 50px;
+    max-width: 619px;
+}
 }
 
 @media (max-width: 1067px) {
@@ -2357,12 +2365,59 @@ span {
     gap: 15px;
 }
 
+    .quality_section .quality_content .quality_para {
+        gap: 50px;
+        max-width: 460px;
+    }
+
 .quality_section .quality_content .quality_para {
-    gap: 40px;
+    gap: 20px;
+}
+
+.quality_section .quality_content .quality_para #quality_btn {
+    width: 234px;
+}
+
+.quality_section .quality_content .quality_para #quality_btn {
+    font-size: 17px;
 }
 }
 
 
+@media (max-width: 900px) {
+  .quality_section .quality_content .quality_para {
+        gap: 50px;
+        max-width: 415px;
+    }
+
+}
+
+@media (max-width: 740px) {
+  .quality_section .quality_content {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.quality_section .quality_content .quality_para p {
+    font-size: 16px;
+}
+
+
+
+.quality_section .quality_content .quality_heading h1 {
+    font-size: 40px;
+}
+
+.quality_section .quality_content .quality_heading p {
+    font-size: 20px
+}
+
+
+
+}
+
+/* s\ */
 
 
 @media (max-width: 680px) {
@@ -2409,13 +2464,26 @@ span {
 
 @media (max-width: 700px) {
   .get_car .getcar_content p {
-    font-size: 16px;
+    font-size: 18px;
 }
 }
 @media (max-width: 626px) {
   #getcar_btns{
     flex-direction: column;
+    
   }
+      .get_car .getcar_content #getcar_btns #schedule_sign_btn {
+        padding: 14px 74px;
+    }
+
+    .get_car .getcar_content {
+    width: 100%;
+}
+
+.get_car .getcar_content h1 {
+    font-size: 40px;
+    line-height: 120%;
+}
 
 }
 
@@ -2483,7 +2551,7 @@ span {
 
 /* review */
 
-@media (max-width:1527px) {
+/* @media (max-width:1527px) {
   .slide .commit {
     gap: 12px;
     max-width: 749px;
@@ -2512,7 +2580,7 @@ span {
     gap: 30px;
     max-width: 696px;
     max-height: 156px;
-}
+}}
 
 
 @media (max-width:816px) {
@@ -2544,7 +2612,196 @@ span {
     padding: 63px var(--main-padding);
 }
 
+} */
+@media (max-width: 1574px) {
+  .slide .profile {
+    max-width: 345px;
+    /* height: 188px; */
 }
+
+
+.slide {
+    padding: 60px 73px;
+}
+
+.slide .commit {
+    gap: 7px;
+    max-width: 800px;
+}
+
+}
+
+@media (max-width: 1400px) {
+     .slide {
+        padding: 30px 49px;
+    }
+}
+
+@media (max-width: 1341px) {
+        .slide .commit {
+        gap: 7px;
+        max-width: 731px;
+    }
+
+    /* .slide .profile .profileicon {
+    max-width: 37px;
+    } */
+}
+
+
+@media (max-width: 1276px) {
+           .slide .commit {
+        max-width: 691px;
+    }
+
+    .slide .profile .profileicon {
+    max-width: 37px;
+    }
+}
+
+@media (max-width: 1200px) {
+        .slide .commit {
+        max-width: 655px;
+    }
+
+        .slide {
+        padding: 30px 29px;
+    }
+}
+
+@media (max-width: 1100px) {
+       .slide .commit {
+        max-width: 629px;
+    }
+    .slide {
+    gap: 43px;
+}
+}
+
+@media (max-width: 1050px) {
+      .review {
+    padding: 120px 79px;
+}
+
+    .slide {
+        gap: 22px;
+    }
+}
+
+@media (max-width: 1000px) {
+     .slide .commit {
+        max-width: 522px;
+    }
+
+}
+
+@media (max-width: 910px) {
+      .slide .commit {
+        max-width: 483px;
+    }
+}
+@media (max-width: 890px) {
+          .slide .commit {
+        max-width: 452px;
+    }
+}
+
+@media (max-width: 842px) {
+          .slide .commit {
+        max-width: 380px;
+    }
+}
+@media (max-width: 766px) {
+          .slide .commit {
+        max-width: 321px;
+    }
+}
+
+@media (max-width: 766px) {
+    .slide .commit{
+    height: inherit;
+}
+
+    .slide .commit {
+        max-width: 264px;
+    }
+}
+
+
+@media (max-width: 660px) {
+        .slide {
+        padding: 30px 13px;
+    }
+    .slide .commit p {
+    width: 100%;
+    font-size: clamp(12px, 1.5vw, 20px);
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--input-first-color);
+}
+}
+
+@media (max-width: 616px) {
+       .slide{
+    flex-direction: column;
+}
+
+.slide .profile {
+        max-width: 104px;
+        /* height: 188px; */
+    }
+
+    #profilename h4 {
+    font-size: 12px
+}
+
+    .slide .commit {
+        max-width: 324px;
+    }
+
+    .review {
+        padding: 120px 34px;
+    }
+
+    .review .review_content .left_review_content h1 {
+    max-width: 100%;
+    font-size:40px;
+      text-align: center;
+}
+
+    .review .review_content .left_review_content p {
+    font-size:25px;
+
+}
+
+.review .review_content{
+  gap: 40px;
+  text-align: center;
+}
+
+
+
+.review .review_content .left_review_content .client_btn {
+  margin-top: 20px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+}
+
+
+@media (max-width: 530px) {
+           .slide {
+        padding: 7px 5px;
+    }
+    .review {
+        padding: 120px 34px;
+    }
+
+}
+
+
+
 
 
 
@@ -2585,12 +2842,28 @@ span {
     flex-direction: column;
   }
 
+  .footer{
+    gap: 38px;
+}
+
   .footer .footer_content .logo_section{
     align-items: center;
     justify-content: center;
     margin-top: 10px;
     gap: 10px;
   }
+
+  .footer .footer_content .about h4 {
+    font-size: 30px;
+}
+
+.footer .footer_content .about p {
+    font-size: 20px;
+}
+
+.footer .footer_content .about {
+    text-align: center;
+}
 
   .footer .footer_content .about{
     margin-top: 30px;
