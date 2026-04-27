@@ -802,7 +802,7 @@ span {
   gap: 20px;
   max-width: 837px;
   padding-right: 20px;
-  /* min-height: 208px; */
+  /* min-height: 208px;  */
 }
 
 .quality_section .quality_content .quality_heading p {
@@ -1793,6 +1793,7 @@ span {
   background-size: cover; /* fill */
   background-position: center; /* center image */
   background-repeat: no-repeat;
+  padding: 131px var(--main-padding);
 }
 
 .form_section .inner_content {
@@ -1805,7 +1806,6 @@ span {
   color: white;
   z-index: 2;
   display: flex;
-  padding: 131px var(--main-padding);
   max-width: 1600px;
   gap: 115px;
   align-items: start;
@@ -1814,6 +1814,7 @@ span {
 .form_section .inner_content .form_info {
   display: flex;
   flex-direction: column;
+  max-width: 695px;
   gap: 30px;
 }
 
@@ -1822,6 +1823,7 @@ span {
   /* max-width: 90%; */
   font-size: clamp(35px, 5vw, 56px);
   line-height: 120%;
+  width: 100%;
 }
 
 .form_section .inner_content .form_info p {
@@ -1935,8 +1937,9 @@ input:focus, textarea:focus {
 }
 
 .appointment .appointment_container h1 {
+  max-width: 882px;
   width: 100%;
-  font-size: clamp(30px, 4vw, 70px);
+  font-size: clamp(30px, 4vw, 56px);
   line-height: 120%;
 }
 
@@ -2095,6 +2098,7 @@ input:focus, textarea:focus {
 }
 .footer .footer_content .about p:hover {
   transform: scale(1.03);
+  padding-left: 10px;
   cursor: pointer;
   color: var(--primary-color);
   border-bottom: 1px solid var(--primary-color);
@@ -2129,7 +2133,7 @@ input:focus, textarea:focus {
   background: transparent;
   max-width: 280px;
   width: 100%;
-  padding: 18px 20px;
+  padding: 18px 30px;
 }
 
 .footer .logo_section {
@@ -3239,6 +3243,22 @@ trusted_company .trustedcompany_slider {
 
 
 /* FORM */
+@media (max-width: 1700px) {
+
+  .form_section .inner_content{
+    padding: 20px 30px;
+  }
+
+  .form_section .inner_content .form form .username input {
+    padding: 12px 10px;
+  }
+
+  .form_section .inner_content .form form textarea {
+    padding: 12px 10px;
+    min-height: 171px;
+  }
+}
+
 
 @media (max-width: 1150px) {
   .form_section .inner_content .form form .username input {
