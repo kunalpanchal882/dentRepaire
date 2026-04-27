@@ -94,6 +94,10 @@ p{
   gap: 20px;
 }
 
+.nav_button input{
+  color: var(--text-color);
+}
+
 span {
   color: var(--primary-color);
 }
@@ -1820,14 +1824,31 @@ span {
 .form_section .inner_content .form form input {
    font-size: clamp(16px, 1.5vw, 20px);
    font-family: var(--font-main);
-  color: var(--text-third-color);
+  color: var(--text-color);
   font-weight: 500;
   width: 100%;
   padding: 12px 12px;
   background-color: var(--input-first-color);
   display: flex;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   gap: 30px;
 }
+
+.form_section .inner_content .form form input,textarea { /* Match your dark theme */
+  border: 1px solid #666; 
+  color: white;
+  outline: none;           /* THIS REMOVES THE WHITE GLITCH EFFECT */
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary-color); /* Change to your brand color */
+  
+  /* Use a box-shadow instead of a border for a glow effect */
+  box-shadow: 0 0 10px rgba(166, 255, 0, 0.3);
+}
+
+
 
 .form_section .inner_content .form form .username {
   display: flex;
@@ -1838,6 +1859,7 @@ span {
   width: 100%;
   padding: 12px 12px;
   background-color: var(--input-first-color);
+  color: var(--text-color);
   display: flex;
   gap: 20px;
 }
@@ -1852,6 +1874,7 @@ span {
   background-color: var(--input-first-color);
   display: flex;
   gap: 20px;
+  color: var(--text-color);
   min-height: 271px;
 }
 
@@ -1991,7 +2014,7 @@ span {
 
 .footer .logo_section #logo{
  max-width: 200px;
- min-height: 125px;
+ /* min-height: 125px; */
 }
 
 .footer .logo_section #logo img{
@@ -2013,10 +2036,13 @@ span {
 }
 
 .footer .logo_section #footer_links i {
-  width: 32px;
-  height: 32px;
+  max-width: 32px;
   transform: scale(1.7);
-  transition: all 0.3s ease-in;
+  transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  backface-visibility: hidden;
+  vertical-align: middle;
 }
 
 .footer .logo_section #footer_links i:hover {
@@ -2040,11 +2066,15 @@ span {
 
 .footer .footer_content .about p {
   font-size: clamp(12px, 1.5vw, 20px);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  backface-visibility: hidden;
+  vertical-align: middle;
   color: var(--text-color);
 }
 .footer .footer_content .about p:hover {
-  transform: scale(1.2);
+  transform: scale(1.03);
   cursor: pointer;
   color: var(--primary-color);
   border-bottom: 1px solid var(--primary-color);
@@ -2074,11 +2104,12 @@ span {
 
 .footer .footer_content .subs .input input {
   font-size: clamp(12px, 1.5vw, 18px);
-  color: #989898;
+  color: var(--text-color);
   border: 2px solid #e8ac12;
   background: transparent;
   max-width: 280px;
-  padding: 10px 20px;
+  width: 100%;
+  padding: 18px 20px;
 }
 
 .footer .logo_section {
@@ -3245,12 +3276,18 @@ trusted_company .trustedcompany_slider {
   .footer .footer_content .logo_section{
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
-    gap: 10px;
+    margin-top: 8px;
+    gap: 15px;
   }
 
   .footer .footer_content .about h4 {
     font-size: 30px;
+}
+
+.footer .footer_content .subs .input {
+    display: flex;
+    gap: 20px;
+    padding: 6px 4px;
 }
 
 .footer .footer_content .about p {
@@ -3262,7 +3299,7 @@ trusted_company .trustedcompany_slider {
 }
 
   .footer .footer_content .about{
-    margin-top: 30px;
+    /* margin-top: 30px; */
     gap: 10px;
   }
 
@@ -3272,6 +3309,19 @@ trusted_company .trustedcompany_slider {
   }
 
 }
+
+
+@media (max-width:510px) {
+  .footer .footer_content {
+        padding: 0 2px;
+    }
+        .footer {
+        gap: 9px;
+        padding: 5px 24px;
+    }
+}
+
+
 
 @media (max-width: 900px) {
   .footer .footer_content .subs .input{
