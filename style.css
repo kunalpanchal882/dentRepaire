@@ -1327,13 +1327,23 @@ span {
         transition: left 0.1s ease-out;
       }
 
+      .gallery .gallery_image {
+  min-height: 734px;
+  height: 100%;
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  max-width: 1600px;
+}
+
       /* Responsive */
       @media (max-width: 640px) {
         .gallery .gallery_image {
   display: flex;
   flex-direction: column;
-  width: 5%;
+  /* width: 5%; */
   gap: 40px;
+      min-height: 300px;
 }
 
         .comparison-container {
@@ -1370,14 +1380,7 @@ span {
   line-height: 150%;
 }
 
-.gallery .gallery_image {
-  max-height: 734px;
-  height: 100%;
-  display: flex;
-  width: 100%;
-  gap: 40px;
-  max-width: 1600px;
-}
+
 
 .gallery .left_gallery {
   position: relative;
