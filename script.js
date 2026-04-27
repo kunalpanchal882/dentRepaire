@@ -40,55 +40,6 @@
 
   });
 
-
-  // infinite scrolling
-  // const track = document.querySelector('.trustedcompany_track');
-
-  // let scrollAmount = 0;
-
-  // function animate() {
-  //   scrollAmount += 1;
-    
-  //   if (scrollAmount >= track.scrollWidth / 2) {
-  //     scrollAmount = 0;
-  //   }
-
-  //   track.style.transform = `translateX(-${scrollAmount}px)`;
-  //   requestAnimationFrame(animate);
-  // }
-
-  // animate();
-
-  // COURASEL
-
-  // document.addEventListener("DOMContentLoaded", () => {
-  //   const slides = document.querySelector(".slides");
-  //   const images = document.querySelectorAll(".slides img");
-
-  //   const nextBtn = document.querySelector(".next");
-  //   const prevBtn = document.querySelector(".prev");
-
-  //   console.log(nextBtn); // debug
-
-  //   let index = 0;
-
-  //   nextBtn.addEventListener("click", () => {
-  //     console.log("hello"); // now this WILL work
-  //     index = (index + 1) % images.length;
-  //     updateSlide();
-  //   });
-
-  //   prevBtn.addEventListener("click", () => {
-  //     index = (index - 1 + images.length) % images.length;
-  //     updateSlide();
-  //   });
-
-  //   function updateSlide() {
-  //     slides.style.transform = `translateX(-${index * 100}%)`;
-  //   }
-  // });
-
-
   // SLIDE IMAGES
   const leftwrape = document.querySelector('.image_right_wrapper')
   const handler = document.querySelector('.slider_handle')
@@ -132,13 +83,7 @@
     });
   });
 
-  // 👉 open first question by default
-  // const firstQuestion = document.querySelector('.single_question.active');
 
-  // if (firstQuestion) {
-  //   const answer = firstQuestion.querySelector('.answer');
-  //   answer.style.maxHeight = answer.scrollHeight + "px";
-  // }
 
   // SELELCT LINKS
   const icons = document.querySelectorAll('#links i')
@@ -161,37 +106,6 @@
   })
 
   // slider
-
-  // function slidingimage(){
-  //     let isDragging = false;
-
-  // handler.addEventListener('mousedown',() => {
-  //     isDragging = true
-  // })
-
-  // window.addEventListener("mouseup", () => {
-  //   isDragging = false;
-  // });
-
-  // window.addEventListener('mousemove',(e) => {
-  //     if(!isDragging) return;
-
-  //     const react = leftContainer.getBoundingClientRect();
-  //     let x= e.clientX - react.left;
-
-  //     if(x <0) x=0;
-  //     if(x > react.width) x=react.width;
-
-  //     handler.style.left = x + "px"
-
-  //     leftContainer.style.width = x + "px"
-
-  // })
-  // }
-
-  // slidingimage()
-
-
 
   // corosel
 
@@ -259,7 +173,7 @@
   const currentNum = document.querySelector('#current')
   const totalNum = document.querySelector('#total')
 
-  const totalSlides = images.length - 1
+  const totalSlides = images.length - 2
   totalNum.textContent = totalSlides
 
   console.log("total slide",totalSlides);
@@ -350,6 +264,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let index = 0;
   const slideHeight = 322;
 
+  // console.log("slide length",slides.length);
+  
+
   let autoReview; // ✅ IMPORTANT
 
   // clone slides
@@ -405,33 +322,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-
-
-  // document.addEventListener("DOMContentLoaded", () => {
-
-  //   const slider = document.getElementById('before-after-slider');
-  //   const before = document.getElementById('before-image');
-  //   const resizer = document.getElementById('resizer');
-
-  //   let active = false;
-
-  //   before.style.width = slider.offsetWidth / 2 + "px";
-
-  //   // 🔥 better drag area
-  //   slider.addEventListener('mousedown', () => active = true);
-  //   document.addEventListener('mouseup', () => active = false);
-
-  //   document.addEventListener('mousemove', (e) => {
-  //     if (!active) return;
-
-  //     let x = e.clientX - slider.getBoundingClientRect().left;
-  //     x = Math.max(0, Math.min(x, slider.offsetWidth));
-
-  //     before.style.width = x + "px";
-  //     resizer.style.left = x + "px";
-  //   });
-
-  // });
 
   const sliders = document.querySelectorAll(".comparison-container");
 

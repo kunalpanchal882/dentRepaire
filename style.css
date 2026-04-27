@@ -199,6 +199,7 @@ span {
   display: flex;
   gap: 8px;
   align-items: center;
+  /* pointer-events: none; */
 }
 
 .track span {
@@ -209,7 +210,9 @@ span {
   background-color: var(--background-secondary-color);
   /* opacity: 0.4; */
   transition: all 0.3s ease;
+  cursor: pointer;
 }
+
 
 /* Active dot (yellow like your UI) */
 .track span.active {
@@ -1625,16 +1628,12 @@ span {
   cursor: pointer;
 }
 
-.dotes span:hover{
-  cu
-}
 
 
 
 
 .review .review_container .dotes span.active {
   background: #f5b400;
-  cursor: pointer;
   
   /* 👇 fake outer border (NO size change) */
   box-shadow: 0 0 0 6px #D0D0D0;
@@ -2078,7 +2077,7 @@ span {
   color: #989898;
   border: 2px solid #e8ac12;
   background: transparent;
-  max-width: 298px;
+  max-width: 280px;
   padding: 10px 20px;
 }
 
