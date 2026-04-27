@@ -1512,6 +1512,7 @@ span {
   /* justify-content: center; */
   flex-direction: column; 
   transition: transform 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .slide {
@@ -1608,6 +1609,11 @@ span {
   flex-direction: column;
   gap: 20px;
   margin-right: 20px;
+  cursor: pointer;
+}
+
+.dotes:hover{
+  cursor: pointer;
 }
 
 .dotes span {
@@ -1616,12 +1622,19 @@ span {
  background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
 }
+
+.dotes span:hover{
+  cu
+}
+
 
 
 
 .review .review_container .dotes span.active {
   background: #f5b400;
+  cursor: pointer;
   
   /* 👇 fake outer border (NO size change) */
   box-shadow: 0 0 0 6px #D0D0D0;
@@ -2065,7 +2078,8 @@ span {
   color: #989898;
   border: 2px solid #e8ac12;
   background: transparent;
-  padding: 20px 80px;
+  max-width: 298px;
+  padding: 10px 20px;
 }
 
 .footer .logo_section {
@@ -2098,6 +2112,11 @@ span {
   font-size: clamp(12px, 1.5vw, 16px);
   color: var(--text-color);
   border-bottom: 1px solid var(--text-four-color);
+}
+
+.page_bottom p:hover{
+  color: var(--primary-color);
+  cursor: pointer;
 }
 
 .page_bottom #left {

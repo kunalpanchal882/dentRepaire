@@ -98,12 +98,14 @@
   const questions = document.querySelectorAll('.single_question');
 
   // 👉 open first question by default
+  window.addEventListener("load", () => {
   const firstQuestion = document.querySelector('.single_question.active');
 
   if (firstQuestion) {
     const answer = firstQuestion.querySelector('.answer');
     answer.style.maxHeight = answer.scrollHeight + "px";
   }
+});
 
   questions.forEach(q => {
     const answer = q.querySelector('.answer');
@@ -271,6 +273,31 @@
     dotes.push(dote)
   }
 
+  // ✅ AUTO SLIDE FUNCTION
+function runAuto() {
+  if (!isAnimation) nextBtn.click();
+}
+
+// ✅ START AUTO SLIDE
+let autoSlide = setInterval(runAuto, 3000);
+
+// ✅ DOT CLICK FUNCTION
+dotes.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+
+    clearInterval(autoSlide); // stop auto
+    autoSlide = setInterval(runAuto, 3000); // restart
+
+    if (isAnimation) return;
+
+    isAnimation = true;
+    index = i + 1;
+
+    slider.style.transition = 'transform 0.5s ease';
+    slideUpdate();
+  });
+});
+
   function updateUI() {
 
     let realIndex = index;
@@ -305,59 +332,78 @@
 
   // auto couosel;
 
-  setInterval(() => {
-    if(!isAnimation){
-      nextBtn.click()
-      // animateBtn(nextBtn);
-      updateUI();
-    }
-  }, 3000);
+  // setInterval(() => {
+  //   if(!isAnimation){
+  //     nextBtn.click()
+  //     // animateBtn(nextBtn);
+  //     updateUI();
+  //   }
+  // }, 3000);
                                                                                                                                 
   // review courosel
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-    const track = document.querySelector('.review_track');
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dotes span');
+  const track = document.querySelector('.review_track');
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dotes span');
 
-    let index = 0;
-    const slideHeight = 322;
+  let index = 0;
+  const slideHeight = 322;
 
-    // 🔥 clone slides for infinite loop
-    slides.forEach(slide => {
-      track.appendChild(slide.cloneNode(true));
-    });
+  let autoReview; // ✅ IMPORTANT
 
-    function updateDots() {
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[index % slides.length].classList.add('active');
+  // clone slides
+  slides.forEach(slide => {
+    track.appendChild(slide.cloneNode(true));
+  });
+
+  function updateDots() {
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index % slides.length].classList.add('active');
+  }
+
+  function moveSlide() {
+    index++;
+
+    track.style.transition = "transform 0.5s ease-in-out";
+    track.style.transform = `translateY(-${index * slideHeight}px)`;
+
+    updateDots();
+
+    if (index === slides.length) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        track.style.transform = `translateY(0px)`;
+        index = 0;
+        updateDots();
+      }, 500);
     }
+  }
 
-    function moveSlide() {
-      index++;
+  // ✅ START AUTO
+  setTimeout(() => {
+    autoReview = setInterval(moveSlide, 2500);
+  }, 1500);
+
+  // ✅ DOT CLICK
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+
+      clearInterval(autoReview); // stop auto
+
+      index = i;
 
       track.style.transition = "transform 0.5s ease-in-out";
       track.style.transform = `translateY(-${index * slideHeight}px)`;
 
       updateDots();
 
-      if (index ===  slides.length) {
-        setTimeout(() => {
-          track.style.transition = "none";
-          track.style.transform = `translateY(0px)`;
-          index = 0;
-          updateDots();
-        }, 1000);
-      }
-    }
-
-    // 🔥 start after delay (so first slide fully visible)
-    setTimeout(() => {
-      setInterval(moveSlide, 2500);
-    }, 1500);
-
+      // restart auto
+      autoReview = setInterval(moveSlide, 2500);
+    });
   });
 
+});
 
 
 
